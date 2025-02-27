@@ -89,6 +89,8 @@ body {
     background-color: #ffffff83;
     padding: 10px 15px;
     border-radius: 4px;
+    text-align: center;
+
   }
 
   header ul li a {
@@ -111,6 +113,7 @@ body {
     color: #fff;
     /* padding: 8px 13px; */
     border-radius: 4px;
+    text-transform: uppercase;
   }
 
   #signIn-btn {
@@ -132,11 +135,15 @@ body {
   /* Additional responsive styles */
   .menu-toggle {
     display: none;
-    background: none;
+    background: transparent;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--hub-base-color);
+  }
+
+  .menu-toggle:hover{
+    background-color: transparent;
   }
   
   /* When scrolled, make the header more compact */
@@ -163,6 +170,10 @@ body {
       display: block;
       grid-area: toggle;
       justify-self: end;
+    }
+
+    header{
+        backdrop-filter: blur(15px);
     }
     
     header nav {
