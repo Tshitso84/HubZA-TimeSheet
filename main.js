@@ -127,7 +127,7 @@ window.addEventListener('load', function() {
     }
 });
 
-// ON SCROLL
+// ON HEADER SCROLL
 
     // Logo resize on scroll
     const header = document.getElementById('mainHeader');
@@ -139,6 +139,54 @@ window.addEventListener('load', function() {
         header.classList.remove('scrolled');
       }
     });
+
+
+    // // BUTTON SCROLL
+
+    // const buttonColor = document.getElementsByClassName('btnBg');
+    
+    // window.addEventListener('scroll', () => {
+    //   if (window.scrollY > 50) {
+    //     buttonColor.classList.add('scrolled');
+    //   } else {
+    //     buttonColor.classList.remove('scrolled');
+    //   }
+    // });
+
+    // Select all elements with the "btnBg" class
+const links = document.querySelectorAll('.btnBg');
+
+// Initial link color setup (you can modify these colors as needed)
+const initialColor = '#fff'; // Black
+const scrolledColor = '#14141f'; // Red
+
+// Set initial color
+links.forEach(link => {
+  link.style.color = initialColor;
+  // Optional: add a smooth transition effect
+  link.style.transition = 'color 0.2s ease';
+});
+
+// Function to handle scroll event
+function handleScroll() {
+  // You can adjust this threshold value based on when you want the color to change
+  const scrollThreshold = 100;
+  
+  if (window.scrollY > scrollThreshold) {
+    // Change color when scrolled past the threshold
+    links.forEach(link => {
+      link.style.color = scrolledColor;
+    });
+  } else {
+    // Revert to initial color when scrolled back up
+    links.forEach(link => {
+      link.style.color = initialColor;
+    });
+  }
+}
+
+// Add scroll event listener
+window.addEventListener('scroll', handleScroll);
 
 // Menu toggle
 
