@@ -121,9 +121,9 @@ window.addEventListener('load', function() {
     });
     
     // Set default date for intern signature
-    const internDateInput = document.getElementById('intern-date');
-    if (internDateInput && !internDateInput.value) {
-        internDateInput.value = today;
+    const employeeDateInput = document.getElementById('employee-date');
+    if (employeeDateInput && !employeeDateInput.value) {
+        employeeDateInput.value = today;
     }
 });
 
