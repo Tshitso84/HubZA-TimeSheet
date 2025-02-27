@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>HUB ZA TECHNOLOGIES- Timesheet</title>
+    <style>
+    </style>
+</head>
+<body>
+
+    <header id="mainHeader">
+        <div class="logo">
+          <img src="assets/Images/thzlogo.png" alt="Logo">
+        </div>
+        
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Admin Login</a></li>
+          </ul>
+        </nav>
+        
+        <div class="navBtns">
+          <div >
+            <button id="register-btn"><a href="#">Register</a>
+            </button>
+          </div>
+          <div >
+            <button id="signIn-btn"><a href="#">Sign In</a></button>
+          </div>
+        </div>
+        
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </header>
+          <div class="container">
+        <h1>Hub ZA Technologies Timesheet</h1>
+
+        <div class="info-section">
+            <div class="card">
+                <div class="input-group">
+                    <label for="intern-name">Employee Name:</label>
+                    <input type="text" id="intern-name" placeholder="Enter your full name">
+                </div>
+                <div class="input-group">
+                    <label for="employee-id">Employee ID:</label>
+                    <input type="text" id="employee-id" placeholder="Enter your ID">
+                </div>
+                <div class="input-group">
+                    <label for="supervisor">Supervisor:</label>
+                    <input type="text" id="supervisor" placeholder="Enter supervisor's name">
+                </div>
+            </div>
+            <div class="card">
+                <div class="input-group">
+                    <label for="pay-period-start">Pay Period Start:</label>
+                    <input type="date" id="pay-period-start">
+                </div>
+                <div class="input-group">
+                    <label for="pay-period-end">Pay Period End:</label>
+                    <input type="date" id="pay-period-end">
+                </div>
+                <div class="input-group">
+                    <label for="department">Department:</label>
+                    <input type="text" id="department" placeholder="e.g., Web Development">
+                </div>
+            </div>
+        </div>
+
+        <div class="time-entries card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Hours</th>
+                        <th>Category</th>
+                        <th>Project</th>
+                        <th>Tasks/Accomplishments</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="entries-table">
+                    <tr class="entry-row">
+                        <td><input type="date"></td>
+                        <td><input type="time"></td>
+                        <td><input type="time"></td>
+                        <td><input type="number" step="0.25" min="0" placeholder="0.00"></td>
+                        <td>
+                            <select>
+                                <option value="standard">Standard</option>
+                                <option value="leave">Leave</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option value="">Select Project</option>
+                                <option value="website-redesign">Website Redesign</option>
+                                <option value="mobile-app">Mobile App Development</option>
+                                <option value="bug-fixes">Bug Fixes</option>
+                                <option value="documentation">Documentation</option>
+                                <option value="team-meeting">Team Meeting</option>
+                                <option value="training">Training</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </td>
+                        <td><textarea placeholder="Describe tasks completed"></textarea></td>
+                        <td class="actions-cell"><button class="remove-btn">Remove</button></td>
+                    </tr>
+                    <tr class="entry-row">
+                        <td><input type="date"></td>
+                        <td><input type="time"></td>
+                        <td><input type="time"></td>
+                        <td><input type="number" step="0.25" min="0" placeholder="0.00"></td>
+                        <td>
+                            <select>
+                                <option value="standard">Standard</option>
+                                <option value="leave">Leave</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option value="">Select Project</option>
+                                <option value="website-redesign">Website Redesign</option>
+                                <option value="mobile-app">Mobile App Development</option>
+                                <option value="bug-fixes">Bug Fixes</option>
+                                <option value="documentation">Documentation</option>
+                                <option value="team-meeting">Team Meeting</option>
+                                <option value="training">Training</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </td>
+                        <td><textarea placeholder="Describe tasks completed"></textarea></td>
+                        <td class="actions-cell"><button class="remove-btn">Remove</button></td>
+                    </tr>
+                    <tr class="entry-row">
+                        <td><input type="date"></td>
+                        <td><input type="time"></td>
+                        <td><input type="time"></td>
+                        <td><input type="number" step="0.25" min="0" placeholder="0.00"></td>
+                        <td>
+                            <select>
+                                <option value="standard">Standard</option>
+                                <option value="leave">Leave</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select>
+                                <option value="">Select Project</option>
+                                <option value="website-redesign">Website Redesign</option>
+                                <option value="mobile-app">Mobile App Development</option>
+                                <option value="bug-fixes">Bug Fixes</option>
+                                <option value="documentation">Documentation</option>
+                                <option value="team-meeting">Team Meeting</option>
+                                <option value="training">Training</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </td>
+                        <td><textarea placeholder="Describe tasks completed"></textarea></td>
+                        <td class="actions-cell"><button class="remove-btn">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="actions">
+            <button id="add-row">+ Add Row</button>
+            <button id="copy-lastWeek"> Copy Last Week</button>
+            <button id="save-template">+ Add Row</button>
+            <button id="calculate-total">Calculate Total Hours</button>
+        </div>
+
+        <div class="summary card">
+            <h3>Weekly Summary</h3>
+            <p><strong>Total Hours:</strong> <span id="total-hours">0.00</span></p>
+            <div class="input-group">
+                <label for="key-learnings">Key Learning Outcomes:</label>
+                <textarea id="key-learnings" rows="3" placeholder="Describe what you've learned this week"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="challenges">Challenges Faced:</label>
+                <textarea id="challenges" rows="3" placeholder="Describe any challenges you encountered"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="next-week">Goals for Next Week:</label>
+                <textarea id="next-week" rows="3" placeholder="What do you plan to accomplish next week?"></textarea>
+            </div>
+        </div>
+
+        <div class="approval">
+            <div class="signature-section">
+                <h3>Intern Certification</h3>
+                <p>I certify that the hours and information reported are correct.</p>
+                <div class="input-group">
+                    <label for="intern-signature">Intern Signature:</label>
+                    <input type="text" id="intern-signature">
+                </div>
+                <div class="input-group">
+                    <label for="intern-date">Date:</label>
+                    <input type="date" id="intern-date">
+                </div>
+            </div>
+            <div class="signature-section">
+                <h3>Supervisor Approval</h3>
+                <p>I approve the hours and work reported by the intern.</p>
+                <div class="input-group">
+                    <label for="supervisor-signature">Supervisor Signature:</label>
+                    <input type="text" id="supervisor-signature">
+                </div>
+                <div class="input-group">
+                    <label for="supervisor-date">Date:</label>
+                    <input type="date" id="supervisor-date">
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Please submit this timesheet to HR by the end of each pay period.</p>
+            <p>For questions or assistance, contact hr@thehub-za.com</p>
+        </footer>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script src="main.js">
+    </script>
+</body>
+</html>
