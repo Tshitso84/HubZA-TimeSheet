@@ -82,15 +82,16 @@ body {
     justify-content: center;
   }
 
-  header ul li {
+ .navList {
     /* color: #fff; */
     list-style: none;
     margin: 0 10px;
     /* background-color: #ffffff83; */
-    padding: 10px 15px;
+    padding: 6px 10px;
     border-radius: 4px;
     text-align: center;
     border: 2px solid #fff;
+    min-width: fit-content;
 
   }
 

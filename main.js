@@ -143,15 +143,6 @@ window.addEventListener('load', function() {
 
     // // BUTTON SCROLL
 
-    // const buttonColor = document.getElementsByClassName('btnBg');
-    
-    // window.addEventListener('scroll', () => {
-    //   if (window.scrollY > 50) {
-    //     buttonColor.classList.add('scrolled');
-    //   } else {
-    //     buttonColor.classList.remove('scrolled');
-    //   }
-    // });
 
     // Select all elements with the "btnBg" class
 const links = document.querySelectorAll('.btnBg');
@@ -164,18 +155,18 @@ const scrolledColor = '#14141f'; // Red
 links.forEach(link => {
   link.style.color = initialColor;
   // Optional: add a smooth transition effect
-  link.style.transition = 'color 0.2s ease';
+  link.style.transition = 'color 0.3s ease';
 });
 
 // Function to handle scroll event
 function handleScroll() {
   // You can adjust this threshold value based on when you want the color to change
-  const scrollThreshold = 100;
+  const scrollThreshold = 50;
   
   if (window.scrollY > scrollThreshold) {
     // Change color when scrolled past the threshold
     links.forEach(link => {
-      link.style.color = scrolledColor;
+        link.style.color = scrolledColor;
     });
   } else {
     // Revert to initial color when scrolled back up
@@ -187,6 +178,7 @@ function handleScroll() {
 
 // Add scroll event listener
 window.addEventListener('scroll', handleScroll);
+
 
 // Menu toggle
 
